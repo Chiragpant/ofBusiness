@@ -1,0 +1,12 @@
+CREATE DATABASE chatlog;
+
+CREATE TABLE `message` (
+  `msgId` int NOT NULL AUTO_INCREMENT,
+  `userId` varchar(16) NOT NULL,
+  `message` longtext,
+  `timestamp` bigint DEFAULT NULL,
+  `isSent` tinyint DEFAULT NULL,
+  PRIMARY KEY (`msgId`),
+  UNIQUE KEY `msgId_UNIQUE` (`msgId`)
+);
+
